@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+}
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body, p, a, ul, li, h1, h2 {
+  margin: 0;
+  padding: o;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin: 10px 0;
+  background-color: hsl(0, 0%, 100%);
+}
+header .notifications {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+header .notifications h3 {
+  color: hsl(224, 21%, 14%);
+}
+header .notifications .badge {
+  width: 32px;
+  height: 23px;
+  background-color: hsl(219, 85%, 26%);
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  font-weight: 800;
+}
+header .mark {
+  margin: 15px;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Plus Jakarta Sans";
+  color: hsl(219, 12%, 42%);
+  font-weight: 500;
+}
+
+.card {
+  display: flex;
+  padding: 15px;
+  align-items: flex-start;
+  margin: 20px 17px;
+  border-radius: 5px;
+}
+.card .avatar {
+  padding-right: 10px;
+}
+.card .avatar img {
+  width: 40px;
+  margin-left: 11px;
+}
+.card.unread-card {
+  background-color: hsl(210, 60%, 98%);
+}
+.card.unread-card .info-text .unread {
+  display: inline-block;
+}
+.card .info-text {
+  font-size: 14px;
+  color: hsl(219, 12%, 42%);
+  font-weight: 400;
+}
+.card .info-text .person-name {
+  font-weight: 700;
+  color: hsl(224, 21%, 14%);
+  margin-right: 3px;
+}
+.card .info-text .action-name {
+  color: hsl(219, 12%, 42%);
+  font-weight: 700;
+  margin-left: 3px;
+}
+.card .info-text .group {
+  color: hsl(219, 85%, 26%);
+}
+.card .info-text .unread {
+  width: 7px;
+  height: 7px;
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
+  display: none;
+  margin-left: 3px;
+  margin-bottom: 2px;
+}
+.card .date-ago {
+  font-size: 14px;
+  color: hsl(219, 14%, 63%);
+}
+.card .info-img {
+  border-radius: 4px;
+  padding-bottom: 10px;
+  margin-left: 5px;
+}
+.card .info-img img {
+  width: 40px;
+}
+.card .private-message {
+  border: 1px solid hsl(219, 14%, 63%);
+  border-radius: 4px;
+  padding: 15px;
+  padding-right: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 9px 0px;
+  color: hsl(219, 12%, 42%);
+}
+
+@media screen and (min-width: 500px) {
+  .card .info-img {
+    align-self: flex-end;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 730px) {
+  body {
+    background-color: hsl(225, 50%, 98.43%);
+    font-size: 16px;
+  }
+  .container {
+    box-shadow: 0px 0px 17px 14px rgba(0, 0, 0, 0.01);
+    max-width: 730px;
+    margin: 70px auto;
+    border-radius: 10px;
+    padding: 1px;
+  }
+  header {
+    margin: 20px;
+    margin-left: 30px;
+    font-size: 16px;
+  }
+  header .notifications {
+    justify-content: flex-start;
+  }
+  header .notifications h3 {
+    font-size: 1.4em;
+  }
+  header .notifications .badge {
+    margin-left: 15px;
+    font-weight: 600;
+  }
+  header .mark {
+    margin: 15px 0px 15px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  header .mark:hover {
+    color: hsl(219, 85%, 26%);
+  }
+  .card {
+    margin: 10px 30px;
+    border-radius: 10px;
+  }
+  .card .avatar img {
+    width: 47px;
+  }
+  .card .info {
+    padding-left: 10px;
+  }
+  .card .info-img {
+    align-self: flex-end;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .card .info-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .card .info-text .person-name {
+    font-weight: 800;
+  }
+  .card .info-text .person-name:hover {
+    color: hsl(219, 85%, 26%);
+  }
+  .card .info-text .group {
+    color: hsl(219, 12%, 42%);
+  }
+  .card .info-text .action-name:hover {
+    color: hsl(219, 85%, 26%);
+  }
+  .card .date {
+    margin-top: 5px;
+  }
+  .card .date .date-ago {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .card .private-message {
+    border: 0.5px solid hsl(219, 14%, 63%);
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

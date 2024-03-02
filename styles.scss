@@ -1,0 +1,239 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+}
+//colors 
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+//neutral
+$White: hsl(0, 0%, 100%);
+$Very-light-grayish-blue: hsl(210, 60%, 98%);
+$Light-grayish-blue-1: hsl(211, 68%, 94%);
+$Light-grayish-blue-2: hsl(205, 33%, 90%);
+$Grayish-blue: hsl(219, 14%, 63%);
+$Dark-grayish-blue: hsl(219, 12%, 42%);
+$Very-dark-blue: hsl(224, 21%, 14%);
+
+// reset css
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body,p,a,ul,li,h1,h2 {
+  margin: 0;
+  padding: o;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%; 
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.container{
+  background-color: $White;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin: 10px 0;
+  background-color: $White;
+  .notifications {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    h3 {
+      color: $Very-dark-blue;
+    }
+    .badge {
+      width: 32px;
+      height: 23px;
+      background-color: $Blue;
+      border-radius: 4px;
+      color: white;
+      text-align: center;
+      font-weight: 800;
+    }
+  }
+  .mark {
+    margin: 15px;
+    border: none;
+    background-color: $White;
+    font-family: 'Plus Jakarta Sans';
+    color: $Dark-grayish-blue;
+    font-weight: 500;
+  }
+}
+
+.card {
+  display: flex;
+  padding: 15px;
+  align-items: flex-start;
+  margin: 20px 17px;
+  border-radius: 5px;
+  .avatar {
+    padding-right: 10px;
+    img {
+      width: 40px;
+      margin-left: 11px;
+    }
+  }
+
+  &.unread-card {
+    background-color: $Very-light-grayish-blue;
+    .info-text .unread {
+      display: inline-block;
+    }
+  }
+  .info-text{
+    font-size: 14px;
+    color: $Dark-grayish-blue;
+    font-weight: 400;
+    .person-name {
+      font-weight: 700;
+      color: $Very-dark-blue;
+      margin-right: 3px;
+    }
+    .action-name {
+      color: $Dark-grayish-blue;
+      font-weight: 700;
+      margin-left: 3px;
+    }
+    .group {
+      color: $Blue;
+    }
+    .unread {
+      width: 7px;
+      height: 7px;
+      background-color: $Red;
+      border-radius: 50%;
+      display: none;
+      margin-left: 3px;
+      margin-bottom: 2px;
+    }
+  }
+  .date-ago {
+    font-size: 14px;
+    color: $Grayish-blue;
+  }
+  .info-img {
+    border-radius: 4px;
+    padding-bottom: 10px;
+    margin-left: 5px;
+    img {
+      width: 40px;
+    }
+  }
+  .private-message {
+    border: 1px solid hsl(219, 14%, 63%);
+    border-radius: 4px;
+    padding: 15px;
+    padding-right: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 9px 0px;
+    color: $Dark-grayish-blue;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .card .info-img {
+    align-self: flex-end;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  body {
+    background-color: hsl(225deg 50% 98.43%);
+    font-size: 16px;
+  }
+  .container{
+    box-shadow: 0px 0px 17px 14px rgba(0, 0, 0, 0.01);
+    max-width: 730px;
+    margin: 70px auto;
+    border-radius: 10px;
+    padding: 1px;
+  }
+  header {
+    margin: 20px;
+    margin-left: 30px;
+    font-size: 16px;
+    .notifications {
+      justify-content: flex-start;
+      h3 {
+        font-size: 1.4em;
+      }
+      .badge {
+        margin-left: 15px;
+        font-weight: 600;
+      }
+    }
+    .mark {
+      margin: 15px 0px 15px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .mark:hover {
+      color: $Blue;
+    }
+  }
+  .card {
+    margin: 10px 30px;
+    border-radius: 10px;
+    .avatar {
+      img {
+        width: 47px;
+      }
+    }
+    .info {
+      padding-left: 10px;
+
+    }  
+    .info-img {
+      align-self: flex-end;
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .info-text {
+      font-size: 16px;
+      font-weight: 500;
+      .person-name {
+        font-weight: 800;
+      }
+      .person-name:hover {
+        color: $Blue;
+      }
+      .group {
+        color: $Dark-grayish-blue;
+      }
+      .action-name:hover {
+        color: $Blue;
+      }
+    }
+    .date {
+      margin-top: 5px;
+      .date-ago {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+    .private-message {
+      border: 0.5px solid hsl(219, 14%, 63%);
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
